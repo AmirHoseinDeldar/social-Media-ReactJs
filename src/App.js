@@ -1,14 +1,15 @@
-import Login from './components/login';
-import chats from './components/chats';
+import Login from './components/Login';
+import Chats from './components/Chats';
 import { Routes, Route } from 'react-router-dom';
 import AuthContextProvier from './contexts/AuchcontextProvider';
+
 function App() {
   return (
     <div>
       <AuthContextProvier>
         <Routes>
+          <Route path='/Chats' Component={Chats} />
           <Route path='/' Component={Login} />
-          <Route path='/chats' Component={chats} />
         </Routes>
       </AuthContextProvier>
     </div>
